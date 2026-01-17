@@ -1,15 +1,13 @@
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @theme base {
   --color-primary: #6b2bd9;
   --color-asset: #565656;
   --color-vector: #eee6fb;
   --color-secondary: #f9fafb;
-  'container-gradient': 'linear-gradient(90deg, #F9FAFB, #F3F0FB,#EEE6FB, #F9FAFB )';
+  --container-gradient: 'linear-gradient(90deg,( #F9FAFB, #F3F0FB,#EEE6FB #F9FAFB))';
 }
-
-
-
 
 body {
   font-family: 'Inter', system-ui, sans-serif;

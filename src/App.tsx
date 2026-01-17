@@ -1,15 +1,18 @@
-import Nav from './components/Nav'
-import Header from './components/Header'
-import Layout from './components/layout'
-import MainSection from './components/MainSection'
+import Nav from './components/Landing Page/Nav'
+import Header from './components/Landing Page/Header'
+import Layout from './components/Landing Page/layout'
+import MainSection from './components/Landing Page/MainSection'
+import Dowload from './components/Landing Page/Dowload'
+import Footer from './components/Landing Page/Footer/Footer'
 
 export default function App() {
   return (
-    <div>
-      <Layout children={undefined} />
+    <Layout>
       <Nav />
       <Header />
       <MainSection />
-    </div>
+      <Dowload />
+      <Footer />
+    </Layout>
   )
 }

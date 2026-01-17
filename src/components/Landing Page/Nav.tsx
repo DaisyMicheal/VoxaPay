@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
-import Logo from '../assets/logo.png'
+import { logo } from '../../assets/index'
 
 function Nav() {
   return (
-    <nav className=' bg-white shadow-sm'>
-      <div className='mx-auto max-w-7xl px-6 flex items-center justify-between h-16'>
+    <nav className=' shadow-sm'>
+      <div className='  px-6 flex items-center justify-between h-16'>
         <Link to='/' className='flex items-center'>
-          <img src={Logo} alt='Logo' className='h-10 w-auto' />
+          <img src={logo} alt='Logo' className='h-10 w-auto' />
           <span className=' text-xl font-semibold '>
             Voxa
             <span className='text-primary font-bold '>Pay</span>
