@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { logo } from '../../assets/index'
+import { logo } from '../assets/index'
 
 function Nav() {
   return (

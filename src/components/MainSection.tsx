@@ -13,7 +13,7 @@ import {
   Wave,
   microphone,
   microphonZ,
-} from '../../assets/index'
+} from '../assets/index'
 
 import { ArrowUpRight } from 'lucide-react'
 

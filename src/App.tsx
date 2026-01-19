@@ -1,18 +1,16 @@
-import Nav from './components/Landing Page/Nav'
-import Header from './components/Landing Page/Header'
-import Layout from './components/Landing Page/layout'
-import MainSection from './components/Landing Page/MainSection'
-import Dowload from './components/Landing Page/Dowload'
-import Footer from './components/Landing Page/Footer/Footer'
+import { Route, Routes } from 'react-router-dom'
+
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Layout from './components/Layout'
 
 export default function App() {
   return (
     <Layout>
-      <Nav />
-      <Header />
-      <MainSection />
-      <Dowload />
-      <Footer />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path='abou' element={<About />} />
+      </Routes>
     </Layout>
   )
 }

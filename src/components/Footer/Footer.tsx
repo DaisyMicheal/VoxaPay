@@ -1,4 +1,4 @@
-import { logo } from '../../../assets/index'
+import { logo } from '../../assets/index'
 import FooterColumn from './FooterColumn'
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 
