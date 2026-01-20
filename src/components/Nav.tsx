@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { logo } from '../assets/index'
+import Button from './Button'
 
 function Nav() {
   return (
@@ -15,14 +16,12 @@ function Nav() {
         <div className='flex text-center gap-6'>
           <Link to='/'>Personal</Link>
           <Link to='/'>Business</Link>
-          <Link to='/'>Company</Link>
-          <Link to='/'>Help</Link>
+          <Link to='about'>Company</Link>
+          <Link to='contact'>Help</Link>
         </div>
         <div className='flex flex-row justify-between gap-5'>
-          <button className='font-md'>Sign in</button>
-          <button className='bg-primary text-white rounded-full px-4 py-2 '>
-            Join Voxa
-          </button>
+          <Button variant='ghost'>Sign in</Button>
+          <Button>Join voxa</Button>
         </div>
       </div>
     </nav>

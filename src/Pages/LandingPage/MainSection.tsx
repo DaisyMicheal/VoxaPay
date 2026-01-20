@@ -13,9 +13,12 @@ import {
   Wave,
   microphone,
   microphonZ,
-} from '../assets/index'
+} from '../../assets/index'
 
 import { ArrowUpRight } from 'lucide-react'
+import Testimonial from '../../components/Testimonial'
+import Card from '../../components/Card'
+import Button from '../../components/Button'
 
 function MainSection() {
   return (
@@ -52,9 +55,7 @@ function MainSection() {
             Voxa understands you, no typing, no stress. Just say it and your
             rent is <br /> paid instantly.
           </p>
-          <button className='mt-6 bg-[#6B2BD9] text-white rounded-full px-4 py-2 '>
-            Open account
-          </button>
+          <Button>OPen account</Button>
         </div>
         <div className='flex justify-center'>
           <div className='relative w-84 h-84 rounded-[98px] bg-vector overflow-hidden'>
@@ -92,9 +93,7 @@ function MainSection() {
             <br /> interruptions, no waiting — just open the app or speak, and
             your <br /> transaction is complete.
           </p>
-          <button className='mt-6 bg-[#6B2BD9] text-white rounded-full px-4 py-2 '>
-            Open account
-          </button>
+          <Button>Open account</Button>
         </div>
       </div>
       {/* trust & security */}
@@ -111,9 +110,7 @@ function MainSection() {
             password — safe, unique, and protected. With Voxa, <br /> your money
             and your peace of mind stay secure.
           </p>
-          <button className='mt-6 bg-[#6B2BD9] text-white rounded-full px-4 py-2 '>
-            Open account
-          </button>
+          <Button>Open account</Button>
         </div>
         <div className='flex justify-center '>
           <div className='w-84 h-84 rounded-[98px] bg-vector overflow-hidden'>
@@ -170,10 +167,9 @@ function MainSection() {
 
           {/* CTA Button */}
           <div className='mt-14'>
-            <button className='bg-primary text-white px-8 py-3 rounded-full font-medium inline-flex items-center gap-2'>
-              Try Voxa Today
-              <ArrowUpRight color='white' size={28} />
-            </button>
+            <Button icon={<ArrowUpRight size={28} />} iconPosition='right'>
+              Try Voxa Today{' '}
+            </Button>
           </div>
         </div>
       </div>
@@ -314,84 +310,8 @@ function MainSection() {
         <h1 className='  text-center text-3xl font-semibold '>
           What our early users are saying{' '}
         </h1>
-      </div>
 
-      <div className='flex flex-row gap-6 justify-center gap-4 mt-20 mb-10'>
-        {/* Testimonial slider 1  */}
-        <div className='relative  w-[420px]'>
-          <div className='absolute inset-0 translate-x-3 translate-y-3 rounded-2xl bg-gray-100'></div>
-
-          <div className='relative z-10 rounded-2xl bg-white p-6 shadow-sm'>
-            {/* Header */}
-            <div className='flex items-start justify-between'>
-              <div>
-                <h4 className='font-semibold text-lg'>John Michael</h4>
-
-                {/* Stars */}
-                <div className='mt-1 flex gap-1 text-yellow-500'>★ ★ ★ ★ ★</div>
-              </div>
-
-              <button className='text-gray-400 hover:text-gray-600'>✕</button>
-            </div>
-
-            {/* Testimonial text */}
-            <p className='mt-4 text-sm leading-relaxed text-gray-600'>
-              Voxa makes banking feel effortless. Using my voice to check
-              balances and transfer funds is fast, secure, and surprisingly
-              accurate.
-            </p>
-          </div>
-        </div>
-
-        {/* Testimonial slider 2  */}
-        <div className='relative  w-[420px]'>
-          <div className='absolute inset-0 translate-x-3 translate-y-3 rounded-2xl bg-gray-100'></div>
-
-          <div className='relative z-10 rounded-2xl bg-white p-6 shadow-sm'>
-            {/* Header */}
-            <div className='flex items-start justify-between'>
-              <div>
-                <h4 className='font-semibold text-lg'>Amina Daniel</h4>
-
-                {/* Stars */}
-                <div className='mt-1 flex gap-1 text-yellow-500'>★ ★ ★ ★ ★</div>
-              </div>
-
-              <button className='text-gray-400 hover:text-gray-600'>✕</button>
-            </div>
-
-            {/* Testimonial text */}
-            <p className='mt-4 text-sm leading-relaxed text-gray-600'>
-              The voice feature is a game-changer. I can manage my finances
-              hands-free without navigating complex screens.
-            </p>
-          </div>
-        </div>
-
-        {/* Testimonial slider 3 */}
-        <div className='relative  w-[420px]'>
-          <div className='absolute inset-0 translate-x-3 translate-y-3 rounded-2xl bg-gray-100'></div>
-
-          <div className='relative z-10 rounded-2xl bg-white p-6 shadow-sm'>
-            {/* Header */}
-            <div className='flex items-start justify-between'>
-              <div>
-                <h4 className='font-semibold text-lg'>Kelechi Mark</h4>
-
-                {/* Stars */}
-                <div className='mt-1 flex gap-1 text-yellow-500'>★ ★ ★ ★ ★</div>
-              </div>
-
-              <button className='text-gray-400 hover:text-gray-600'>✕</button>
-            </div>
-
-            {/* Testimonial text */}
-            <p className='mt-4 text-sm leading-relaxed text-gray-600'>
-              The voice feature is a game-changer. I can manage my finances
-              hands-free without navigating complex screens.
-            </p>
-          </div>
-        </div>
+        <Testimonial />
       </div>
 
       {/* Trust & Security   */}
@@ -401,42 +321,7 @@ function MainSection() {
           <span className='text-primary'> Protected</span>{' '}
         </h1>
 
-        <div className='flex flex-row justify-center gap-10 mt-20'>
-          {/* Shield */}
-          <div className=' w-68 h-48 bg-white rounded-xl shadow-lg p-4'>
-            <div className=' mb-2  mx-20 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center  '>
-              <img src={shield} alt='Security Shield' className='w-6 h-6 ' />
-            </div>
-
-            <h1 className='  font-semibold text-lg'>One Voice, One Phone</h1>
-            <p className='mt-2 text-sm text-asset'>
-              Your unique voice signature keeps your account secure.
-            </p>
-          </div>
-
-          {/* Lock */}
-          <div className=' w-68 h-48 bg-white rounded-xl shadow-lg p-4'>
-            <div className=' mb-2  mx-20 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center  '>
-              <img src={lock} alt='Security ' className='w-6 h-6 ' />
-            </div>
-
-            <h1 className='  font-semibold text-lg'>Voice PIN Security</h1>
-            <p className='mt-2 text-sm text-asset'>
-              Your unique voice signature keeps your account secure.
-            </p>
-          </div>
-          {/* Lincesed */}
-          <div className=' w-68 h-48 bg-white rounded-xl shadow-lg p-4'>
-            <div className=' mb-2  mx-20 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center  '>
-              <img src={doc} alt='Lincesed & Protection' className='w-6 h-6 ' />
-            </div>
-
-            <h1 className='  font-semibold text-lg'>Lincensed & Protected</h1>
-            <p className='mt-2 text-sm text-asset'>
-              Your unique voice signature keeps your account secure.
-            </p>
-          </div>
-        </div>
+        <Card />
       </div>
 
       {/* Voxa For Business  */}

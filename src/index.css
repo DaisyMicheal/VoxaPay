@@ -6,6 +6,8 @@
   --color-asset: #565656;
   --color-vector: #eee6fb;
   --color-secondary: #f9fafb;
+  --color-highlight:#E2D2FF;
+  --color-button:#6B2BD9
   --container-gradient: 'linear-gradient(90deg,( #F9FAFB, #F3F0FB,#EEE6FB #F9FAFB))';
 }
 
