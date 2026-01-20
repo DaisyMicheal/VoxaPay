@@ -1,13 +1,12 @@
 import { phone, phone2, apple, google } from '../../assets/index'
 import { Link } from 'react-router-dom'
+import Badges from '../../components/ui/Badges'
 
 export default function Header() {
   return (
     <div className=' max-w-7xl flex justify-between  px-8 py-8 '>
       <div className='p-6  '>
-        <span className=' inline-block rounded-md bg-[#E2D7FF] font-body text-sm px-6 py-1 text-primary font-medium '>
-          Say it, Send it, Done
-        </span>
+        <Badges>Say it, Send it, Done</Badges>
         <h1 className='mt-6 text-3xl/11  leading-tight'>
           The first African banking app that <br />
           speaks your language, and listens too.

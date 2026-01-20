@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { apple, google, mockup } from '../assets/index'
+import { apple, google, mockup } from '../../assets/index'
 
 export default function Dowload() {
   return (

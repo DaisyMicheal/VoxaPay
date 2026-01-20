@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import Nav from '../../components/Nav'
+import Nav from '../../components/layout/Nav'
 import { ChevronRight } from 'lucide-react'
 import { group } from '../../assets'
-import Footer from '../../components/Footer/Footer'
-import Dowload from '../../components/Dowload'
+import Footer from '../../components/layout/Footer/Footer'
+import Dowload from '../../components/layout/Dowload'
 
 export default function Contact() {
   return (

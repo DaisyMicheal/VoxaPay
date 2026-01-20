@@ -1,13 +1,13 @@
 import type { ReactNode } from 'react'
-type LayoutProps = {
+type ContainerProps = {
   children: ReactNode
 }
 
-function Layout({ children }: LayoutProps) {
+function Container({ children }: ContainerProps) {
   return (
     <div className='bg-secondary'>
       <div className='mx-auto max-w-7xl px-6'>{children}</div>
     </div>
   )
 }
-export default Layout
+export default Container

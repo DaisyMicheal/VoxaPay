@@ -16,9 +16,10 @@ import {
 } from '../../assets/index'
 
 import { ArrowUpRight } from 'lucide-react'
-import Testimonial from '../../components/Testimonial'
-import Card from '../../components/Card'
-import Button from '../../components/Button'
+import Testimonial from '../../components/layout/Testimonial'
+import { Card } from '../../components/ui/Card'
+import Button from '../../components/ui/Button'
+import Badges from '../../components/ui/Badges'
 
 function MainSection() {
   return (
@@ -43,10 +44,7 @@ function MainSection() {
       {/* Voice banking section */}
       <div className=' max-w-7xl mt-16 px-16  flex flex-row justify-between  gap-2'>
         <div className='  p-2'>
-          <span className='text-base text-sm font-medium text-primary inline-block rounded-md px-2 py-1 bg-[#F3EEFF] '>
-            {' '}
-            Voice Banking{' '}
-          </span>
+          <Badges>Voice Banking</Badges>
           <h1 className='font-medium  text-3xl var(--font-montserrat) '>
             Say it, Send in minute
           </h1>
@@ -82,9 +80,7 @@ function MainSection() {
           </div>
         </div>
         <div className='p-2'>
-          <span className='text-base text-sm font-medium text-primary inline-block rounded-md px-2 py-1 bg-[#F3EEFF] '>
-            Fast transaction
-          </span>
+          <Badges>Fast Transaction</Badges>
           <h1 className=' mt-3 font-medium  text-3xl var(--font-montserrat) '>
             Zero fee charges, Fast Transfers
           </h1>
@@ -99,9 +95,7 @@ function MainSection() {
       {/* trust & security */}
       <div className=' max-w-7xl mt-16 px-16 py-6  flex flex-row justify-between gap-2'>
         <div className='p-2'>
-          <span className='text-base text-sm font-medium text-primary inline-block rounded-md px-2 py-1 bg-[#F3EEFF] '>
-            Trust & Security
-          </span>
+          <Badges>Trust & Security</Badges>
           <h1 className=' mt-2 font-medium  text-3xl var(--font-montserrat) '>
             I sabi use bank app now, no <br /> stress again
           </h1>
@@ -131,38 +125,42 @@ function MainSection() {
           {/* Cards */}
           <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
             {/* Card 1 */}
-            <div className='bg-white rounded-xl shadow-lg p-6 text-left'>
+
+            <Card>
               <img src={Wave} alt='' className='w-16 h-16' />
-              <h2 className='font-semibold text-lg mt-2'>Speak Naturally</h2>
+              <h2 className='font-semibold text-lg mt-2'> Speak Naturally</h2>
               <p className='mt-2 text-sm text-asset'>
                 Say it the way you talk, “Raba, send ₦5,000 to Aisha.” Your
                 voice is your command.
               </p>
-            </div>
+            </Card>
 
             {/* Card 2 */}
-            <div className='bg-white rounded-xl shadow-lg p-6 text-left'>
+
+            <Card>
               <img src={Wave} alt='' className='w-16 h-16' />
               <h2 className='font-semibold text-lg mt-2'>
-                We Confirm It’s You
+                {' '}
+                We comfirm it's you
               </h2>
               <p className='mt-2 text-sm text-asset'>
                 Voxa understands your voice and confirms your identity before
                 any transaction.
               </p>
-            </div>
-
+            </Card>
             {/* Card 3 */}
-            <div className='bg-white rounded-xl shadow-lg p-6 text-left'>
+
+            <Card>
               <img src={Wave} alt='' className='w-16 h-16' />
               <h2 className='font-semibold text-lg mt-2'>
+                {' '}
                 Money Moves Instantly
               </h2>
               <p className='mt-2 text-sm text-asset'>
                 Once you speak and confirm, your money moves immediately. Fast
                 and secure.
               </p>
-            </div>
+            </Card>
           </div>
 
           {/* CTA Button */}
@@ -320,8 +318,43 @@ function MainSection() {
           Your Money. Your Voice.{' '}
           <span className='text-primary'> Protected</span>{' '}
         </h1>
+        <div className='flex flex-row justify-center gap-10 mt-20'>
+          <Card className='w-68 h-48'>
+            <div className='mb-2  mx-20 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center '>
+              {' '}
+              <img src={shield} alt='' className='w-6 h-6' />
+            </div>
 
-        <Card />
+            <h2 className='font-semibold text-lg mt-2'>One Voice, One Phone</h2>
+            <p className='mt-2 text-sm text-asset'>
+              Your unique voice signature keeps your account secure.
+            </p>
+          </Card>
+          <Card className='w-68 h-48'>
+            <div className='mb-2  mx-20 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center '>
+              {' '}
+              <img src={lock} alt='' className='w-6 h-6' />
+            </div>
+
+            <h2 className='font-semibold text-lg mt-2'>Voice PIN Security</h2>
+            <p className='mt-2 text-sm text-asset'>
+              Your unique voice signature keeps your account secure.
+            </p>
+          </Card>
+          <Card className='w-68 h-48'>
+            <div className='mb-2  mx-20 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center '>
+              {' '}
+              <img src={doc} alt='' className='w-6 h-6' />
+            </div>
+
+            <h2 className='font-semibold text-lg mt-2'>
+              Lincensed & Protected
+            </h2>
+            <p className='mt-2 text-sm text-asset'>
+              Your unique voice signature keeps your account secure.
+            </p>
+          </Card>
+        </div>
       </div>
 
       {/* Voxa For Business  */}

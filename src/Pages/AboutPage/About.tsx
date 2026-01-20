@@ -1,5 +1,5 @@
-import Footer from '../../components/Footer/Footer'
-import Nav from '../../components/Nav'
+import Footer from '../../components/layout/Footer/Footer'
+import Nav from '../../components/layout/Nav'
 import Info from './Info'
 
 function About() {

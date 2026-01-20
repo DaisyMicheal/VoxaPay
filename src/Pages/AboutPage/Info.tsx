@@ -1,6 +1,6 @@
 import CountUp from 'react-countup'
 
-import Button from '../../components/Button'
+import Button from '../../components/ui/Button'
 
 import {
   about1,
@@ -14,15 +14,25 @@ import {
   value,
   vision,
 } from '../../assets'
-import { ArrowUpRight, Facebook, Linkedin, Twitter } from 'lucide-react'
+import {
+  LightbulbIcon,
+  ArrowUpRight,
+  Facebook,
+  Lightbulb,
+  Linkedin,
+  Shield,
+  ShieldAlert,
+  ShieldPlus,
+  Twitter,
+} from 'lucide-react'
+import Badges from '../../components/ui/Badges'
+import { Card } from '../../components/ui/Card'
 
 export default function About() {
   return (
     <div className=' max-w-7xl flex flex-col justify-center mt-20'>
       <div className='p-2 flex flex-col items-center'>
-        <span className='text-center px-6 py-1 inline-block font-medium text-sm rounded-full bg-highlight'>
-          About Us{' '}
-        </span>
+        <Badges>About Us</Badges>
         <h1 className='mt-6 font-bold text-3xl text-center '>
           Empowering Africa With Fast, Secure, <br /> & Intelligent Payment
         </h1>
@@ -140,45 +150,41 @@ export default function About() {
         </h1>
 
         <div className='flex flex-row justify-center gap-10 mt-20'>
-          {/* Shield */}
-          <div className=' w-68 h-48 bg-white rounded-xl shadow-lg p-4'>
-            <div className=' mb-2  mx-20 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center  '>
-              <img src={shield} alt='Security Shield' className='w-6 h-6 ' />
+          {/* Card 1 */}
+
+          <Card className='w-68 h-48'>
+            <div className='mb-2 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center'>
+              <LightbulbIcon color='#6b2bd9' size={20} />{' '}
             </div>
-
-            <h1 className='  font-semibold text-lg'>Innovation</h1>
+            <h2 className='font-semibold text-lg mt-2'> Innovation</h2>
             <p className='mt-2 text-sm text-asset'>
-              Bringing modern technology like voice <br />
-              intelligence into everyday finance.
+              Bringing modern technology like voice intelligence into everyday
+              finance.
             </p>
-          </div>
+          </Card>
 
-          {/* Lock */}
-          <div className=' w-68 h-48 bg-white rounded-xl shadow-lg p-4'>
-            <div className=' mb-2  mx-20 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center  '>
-              <img src={shield} alt='Security ' className='w-6 h-6 ' />
+          {/* Card 2 */}
+
+          <Card className='w-68 h-48'>
+            <div className='mb-2   rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center'>
+              <Shield color='#6b2bd9' size={20} />{' '}
             </div>
-
-            <h1 className='  font-semibold text-lg'>Trust</h1>
+            <h2 className='font-semibold text-lg mt-2'> Trust</h2>
             <p className='mt-2 text-sm text-asset'>
-              Providing transparent and reliable financial <br /> services.
+              Providing transparent and reliable financial services.
             </p>
-          </div>
-          {/* Lincesed */}
-          <div className=' w-68 h-48 bg-white rounded-xl shadow-lg p-4'>
-            <div className=' mb-2  mx-20 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center  '>
-              <img
-                src={shield}
-                alt='Lincesed & Protection'
-                className='w-6 h-6 '
-              />
+          </Card>
+          {/* Card 3 */}
+
+          <Card className='w-68 h-48'>
+            <div className='mb-2 rounded-full bg-[#F5EFFF] w-12 h-12 flex items-center justify-center'>
+              <ShieldPlus color='#6b2bd9' size={20} />{' '}
             </div>
-
-            <h1 className='  font-semibold text-lg'>Security</h1>
+            <h2 className='font-semibold text-lg mt-2'> Security</h2>
             <p className='mt-2 text-sm text-asset'>
-              Protecting your money and data with <br /> advanced systems.
+              Protecting your money and data with advanced systems.
             </p>
-          </div>
+          </Card>
         </div>
       </div>
 

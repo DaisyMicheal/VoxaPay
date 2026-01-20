@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { logo } from '../assets/index'
-import Button from './Button'
+import { logo } from '../../assets/index'
+import Button from '../ui/Button'
 
 function Nav() {
   return (
